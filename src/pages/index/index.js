@@ -8,9 +8,9 @@ import CONS from "../../common/const";
 import './index.scss'
 
 
-@inject('counterStore')
+@inject('home')
 @observer
-class Index extends Component {
+class Home extends Component {
 
   config = {
     navigationBarTitleText: '首页'
@@ -30,23 +30,7 @@ class Index extends Component {
 
   componentDidHide () { }
 
-  increment = () => {
-    const { counterStore } = this.props
-    counterStore.increment()
-  }
-
-  decrement = () => {
-    const { counterStore } = this.props
-    counterStore.decrement()
-  }
-
-  incrementAsync = () => {
-    const { counterStore } = this.props
-    counterStore.incrementAsync()
-  }
-
   render () {
-    const { counterStore: { counter } } = this.props
     return (
       <View className='app'>
         {/* HOME BG */}
@@ -62,4 +46,4 @@ class Index extends Component {
   }
 }
 
-export default Index
+export default Home
