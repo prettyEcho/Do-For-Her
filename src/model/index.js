@@ -1,9 +1,8 @@
 import Home from './home'
 
 
-export function getInitStore () {
+export const getInitStore = () => {
   return {
     home: new Home()
   }
 }
-
