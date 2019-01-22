@@ -1,12 +1,13 @@
 {
-	"miniprogramRoot": "miniprogram/",
+	"miniprogramRoot": "dist/",
 	"cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
 		"urlCheck": true,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true,
+		"autoAudits": false
 	},
 	"appid": "wx4e40d5908945058a",
 	"projectname": "Do-For-Her",

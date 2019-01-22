@@ -7,7 +7,6 @@ import CONS from "../../common/const";
 
 import './index.scss'
 
-
 @inject('home')
 @observer
 class Home extends Component {
@@ -22,7 +21,11 @@ class Home extends Component {
     console.log('componentWillReact')
   }
 
-  componentDidMount() { }
+  componentDidMount() {
+
+    this.props.home.login()
+
+  }
 
   componentWillUnmount() { }
 

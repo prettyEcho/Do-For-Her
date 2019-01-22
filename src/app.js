@@ -1,5 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/mobx'
+import '@tarojs/async-await' // 支持async
 import Index from './pages/index'
 import { getInitStore } from './model/index'
 import './app.scss'
@@ -26,7 +27,8 @@ class App extends Component {
   }
 
   componentWillMount() {
-
+    // 小程序云初始化
+    wx.cloud.init()
   }
 
 

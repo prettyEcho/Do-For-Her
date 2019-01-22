@@ -7,23 +7,13 @@ export default class Home {
   @action
   login() {
     Taro.login({
-      success: function (res) {
+      success: async (res) => {
         if (res.code) {
-          console.log('res.code', res.code)
-          /* Taro.request({
-            url: 'https://test.com/login',
-            data: {
-              username: 'zhangsan', // 用户输入的账号
-              password: 'pwd123456', // 用户输入的密码
-              code: res.code
-            },
-            success: function (res) {
-              // 登录成功
-              if (res.statusCode === 200) {
-                console.log(res.data.sessionId)// 服务器回包内容
-              }
-            }
-          }) */
+          try {
+            const token = await this.getLoginToken(res.code)
+          } catch (e) {
+            console.log('获取用户登录态失败！' + res.errMsg)
+          }
         } else {
           console.log('获取用户登录态失败！' + res.errMsg)
         }
@@ -31,4 +21,13 @@ export default class Home {
     });
   }
 
+
+  getLoginToken(code) {
+    return wx.cloud.callFunction({
+      // 云函数名称
+      name: 'login',
+      // 传给云函数的参数
+      data: { code },
+    })
+  }
 } 
