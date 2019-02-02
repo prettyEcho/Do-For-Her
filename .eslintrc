@@ -71,5 +71,8 @@
         "no-multi-assign": 0,
         "import/prefer-default-export": 0,
         "global-require": 0
+    },
+    "globals": {
+        "wx": true
     }
 }

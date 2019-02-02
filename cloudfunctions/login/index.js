@@ -40,6 +40,7 @@ exports.main = async (event, context) => {
   })
 }
 
+// 获取session
 function getSession(code) {
   return Taro.request({
     url: 'https://api.weixin.qq.com/sns/jscode2session',

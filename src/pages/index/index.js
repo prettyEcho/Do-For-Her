@@ -18,12 +18,10 @@ class Home extends Component {
   componentWillMount() { }
 
   componentWillReact() {
-    console.log('componentWillReact')
+    // this.props.home.login()
   }
 
   componentDidMount() {
-
-    this.props.home.login()
 
   }
 
