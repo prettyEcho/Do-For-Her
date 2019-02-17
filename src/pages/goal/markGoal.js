@@ -5,13 +5,13 @@ import sky from '../../img/sky.jpeg'
 import fly from '../../img/fly.jpeg'
 import CONS from "../../common/const";
 
-import './index.scss'
-@inject('home')
+import './style/index.scss'
+
 @observer
-class Home extends Component {
+class Goal extends Component {
 
   config = {
-    navigationBarTitleText: '首页'
+    navigationBarTitleText: '我的目标'
   }
 
   componentWillMount () { }
@@ -40,16 +40,16 @@ class Home extends Component {
   render () {
     console.log(CONS.HomeShow)
     return (
-      <View className='home'>
+      <View className='app'>
         {/* HOME BG */}
-        <Image className="home__bg" src={fly} />
+        <Image className="app__bg" src={fly} />
         {/*  HOME ITEM */}
-        <View className="home__main">
+        <View className="app__main">
           {
             CONS.HomeShow.map((item, index) =>
               <Button
                 onClick={this.itemClick.bind(this, item.url, item.param)}
-                className={`home__main_item home__main_item-bgc${index}`}
+                className={`app__main_item app__main_item-bgc${index}`}
                 key={index}
               >
                 {item.name}
@@ -62,4 +62,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default Goal
