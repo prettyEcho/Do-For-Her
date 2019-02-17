@@ -18,7 +18,7 @@ class GoalPanel extends Component {
       <View className="goalPanel">
         <View className="goalPanel__nav">
           <Text className="goalPanel__nav_title">{title}</Text>
-          <Text className="goalPanel__nav_add">add</Text>
+          <Text className="iconfont goalPanel__nav_add">&#xe64f;</Text>
         </View>
         <View className="goalPanel__subNav">
           <Text className="goalPanel__subNav_txt">进行中</Text>
