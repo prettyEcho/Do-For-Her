@@ -41,7 +41,10 @@ class Goal extends Component {
       {
         id: 'goal1',
         img: 'https://source.qunarzz.com/site/images/qmp/banklogo/nongye.png',
-        name: '俯卧撑'
+        title: '俯卧撑',
+        total: 28,
+        insist: 5,
+        rest: 23
       }
     ]
     return (
